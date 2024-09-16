@@ -1,0 +1,30 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="outer">
+    <div class="image">
+        <img src="{% static 'blog/images/profile.png' %}" alt="">
+    </div>
+    <div class="quote">
+        <h1>"Code, Create, Conquer: Turning Ideas into Impact."</h1>
+    </div>
+    <br>
+    <div class="blogs">
+        {% if not post %}
+            <h1 style="color: aliceblue; margin: 100px 0;">No Posts Yet 😔</h1>
+        {% endif %}
+
+        {% for p in post %}
+        <a href="{% url 'post_detail' id=p.post_id %}" class="item-link">
+            <div class="item">
+                <h1 class="post_title">{{p.post_title}}</h1>
+                <h4 class="post_description">{{p.post_description}}</h4>
+                <p class="post_content">{{p.post_body|slice:":50"}}</p>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock content %}

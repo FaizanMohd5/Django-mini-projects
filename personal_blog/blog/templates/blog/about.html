@@ -1,0 +1,19 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="about_container">
+    <h1>About Me</h1>
+    <div class="about_content">
+        <img src="{% static 'blog/images/profile.png' %}" alt="Your Profile Picture" class="profile-pic">
+        
+        <p>Hello! I'm Faizan, a passionate developer and technology enthusiast. I'm currently an undergraduate student majoring in AI & Data Science, and I have a deep interest in Python, Django, and web development.</p>
+        
+        <p>Over the past few years, I've been honing my skills in various programming languages like Java, C/C++, and JavaScript, while focusing on building web applications using Python and Django. I enjoy creating software tools and libraries, and I believe in the power of open-source contributions to learn, grow, and make an impact in the tech community.</p>
+        
+        <p>Apart from coding, I love to explore new technologies, read about advancements in AI, and participate in hackathons and competitions to challenge myself. My ultimate goal is to achieve financial independence by leveraging my skills in freelancing, open source, and building a career in tech that is both fulfilling and rewarding.</p>
+        
+        <p>When I'm not coding, you can find me experimenting with new recipes in the kitchen, cycling around the city, or diving into a good book. I'm always excited to connect with like-minded people, so feel free to reach out through the contact page!</p>
+    </div>
+</div>
+{% endblock content %}

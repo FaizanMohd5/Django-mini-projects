@@ -1,0 +1,26 @@
+{% extends 'blog/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="con-div">
+    <div class="contact_container">
+        <h1>Contact Me</h1>
+    
+        <div class="contact_details">
+            <p>Email: <a href="mailto:faizanmohammed416@gmail.com">faizanmohammed416@gmail.com</a></p>
+            <p>Phone: +91-6302823995</p>
+            <p>Address: 5-4-708/B Abids, Hyderabad, India</p>
+        </div>
+    
+        <h2>Send a Message</h2>
+        <form method="get" action="{% url 'contact' %}" id="contact-form">
+            {% csrf_token %}
+            {{cf}}
+            <input type="submit" value="Send">
+        </form>
+    </div>
+</div>
+
+{% endblock content %}
