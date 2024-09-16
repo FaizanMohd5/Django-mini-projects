@@ -1,0 +1,330 @@
+/* Basic reset and box-sizing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* General body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #2f3136; /* Dark gray background */
+    color: #ffffff; /* White text color */
+    line-height: 1.6;
+}
+
+/* Container styling for all pages */
+.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Header styling */
+h1 {
+    color: #7289da; /* Discord blue */
+    margin-bottom: 20px;
+}
+
+/* Form and task list container styling for home.html */
+.add-show {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Form styling for home.html */
+.add-task {
+    flex: 1;
+    margin-right: 20px; /* Space between form and task list */
+}
+
+.add-task form {
+    background-color: #36393f; /* Darker background for form */
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #40444b; /* Darker gray border */
+}
+
+.add-task .form-group {
+    margin-bottom: 15px;
+}
+
+.add-task .form-group label {
+    display: block;
+    color: #b9bbbe; /* Light gray for labels */
+    margin-bottom: 5px;
+}
+
+.add-task form input[type="text"],
+.add-task form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #40444b; /* Darker gray border */
+    border-radius: 5px;
+    background-color: #2f3136; /* Even darker background for inputs */
+    color: #ffffff; /* White text color */
+}
+
+.add-task form input[type="submit"] {
+    background-color: #7289da; /* Discord blue */
+    color: #ffffff; /* White text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-task form input[type="submit"]:hover {
+    background-color: #5b6eae; /* Slightly darker blue */
+}
+
+/* Task list styling for home.html */
+.task-list {
+    flex: 2;
+}
+/* Filter options styling */
+.filter-options {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between filter options */
+    margin-bottom: 20px; /* Space below filter options */
+}
+
+.filter-options a {
+    text-decoration: none; /* Remove underline from links */
+}
+
+.filter-options div {
+    background-color: #2f3136; /* Dark background for filter options */
+    color: #b9bbbe; /* Light gray text color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.filter-options div:hover {
+    background-color: #40444b; /* Slightly lighter gray on hover */
+}
+
+.filter-options .active {
+    background-color: #7289da; /* Discord blue for active filter */
+    color: #ffffff; /* White text color for active filter */
+}
+
+.task-list .task {
+    background-color: #36393f; /* Darker gray for tasks */
+    border: 1px solid #40444b; /* Darker gray border */
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-list .task .details {
+    color: #b9bbbe; /* Light gray text color */
+}
+
+.task-list .task.completed-task {
+    background-color: #40444b; /* Slightly lighter gray for completed tasks */
+}
+
+.task-list .task .options {
+    display: flex;
+    gap: 10px;
+}
+
+.task-list .task .options button,
+.task-list .task .options input[type="submit"] {
+    background-color: #7289da; /* Discord blue */
+    color: #ffffff; /* White text color */
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.task-list .task .options button:hover,
+.task-list .task .options input[type="submit"]:hover {
+    background-color: #5b6eae; /* Slightly darker blue */
+}
+
+/* Link styling */
+a {
+    color: #7289da; /* Discord blue */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Task detail page styling */
+.task-detail {
+    background-color: #36393f; /* Darker gray for details */
+    border: 1px solid #40444b; /* Darker gray border */
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.task-detail h2 {
+    color: #7289da; /* Discord blue */
+    margin-bottom: 15px;
+}
+
+.task-detail p {
+    margin-bottom: 10px;
+}
+
+.task-detail a {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #7289da; /* Discord blue */
+    color: #ffffff; /* White text color */
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.task-detail a:hover {
+    background-color: #5b6eae; /* Slightly darker blue */
+}
+
+/* Update page specific styling */
+.update {
+    background-color: #36393f; /* Darker gray for update page */
+    border: 1px solid #40444b; /* Darker gray border */
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.update h2 {
+    color: #7289da; /* Discord blue */
+    margin-bottom: 20px;
+}
+
+.update form {
+    background-color: #2f3136; /* Even darker background for form */
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #40444b; /* Darker gray border */
+}
+
+.update form input[type="text"],
+.update form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #40444b; /* Darker gray border */
+    border-radius: 5px;
+    background-color: #2f3136; /* Even darker background for inputs */
+    color: #ffffff; /* White text color */
+}
+
+.update form input[type="submit"] {
+    background-color: #7289da; /* Discord blue */
+    color: #ffffff; /* White text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.update form input[type="submit"]:hover {
+    background-color: #5b6eae; /* Slightly darker blue */
+}
+
+.update a {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #7289da; /* Discord blue */
+    color: #ffffff; /* White text color */
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.update a:hover {
+    background-color: #5b6eae; /* Slightly darker blue */
+}
+
+/* Responsive Styles */
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .add-show {
+        flex-direction: column; /* Stack form and task list vertically */
+        align-items: stretch;
+    }
+
+    .add-task {
+        margin-right: 0;
+        margin-bottom: 20px; /* Space between form and task list on mobile */
+    }
+
+    .task-list {
+        flex: 1;
+        margin-bottom: 20px; /* Space below task list on mobile */
+    }
+
+    .task-list .task {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .task-list .task .options {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .filter-options {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px; /* Space below filter options on mobile */
+    }
+
+    .filter-options div {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .add-show {
+        flex-direction: column;
+    }
+
+    .add-task {
+        margin-right: 0;
+        margin-bottom: 20px; /* Space between form and task list on tablet */
+    }
+
+    .task-list {
+        flex: 1;
+    }
+
+    .task-list .task {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .task-list .task .options {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .filter-options {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}

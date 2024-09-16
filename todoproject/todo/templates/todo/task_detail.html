@@ -1,0 +1,18 @@
+{% extends 'todo/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="task-detail">
+    <h2>Task Details</h2>
+    <div class="task-info">
+        <h3>{{ task.title }}</h3>
+        <p><strong>Description:</strong> {{ task.description }}</p>
+        <p><strong>Created At:</strong> {{ task.created_at }}</p>
+        <p><strong>Last Updated:</strong> {{ task.updated_at }}</p>
+        <p><strong>Status:</strong> {% if task.completed %} Completed {% else %} Incomplete {% endif %}</p>
+    </div>
+    <a href="{% url 'home' %}">Back to Home</a>
+</div>
+
+{% endblock content %}
