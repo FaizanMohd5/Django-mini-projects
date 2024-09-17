@@ -4,7 +4,7 @@ from django.core.cache import cache
 
 def home(request):
 
-    api_key = "b626f9a44d77efb16e3397b876f3cb68"
+    api_key = "<type_key_here>"
     city = request.GET.get('city', 'Hyderabad')  
     country = request.GET.get('country', 'India')  
     
